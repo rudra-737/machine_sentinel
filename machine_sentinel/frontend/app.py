@@ -3,7 +3,10 @@ import pandas as pd
 import requests
 import streamlit as st
 
-API_URL = os.getenv("API_URL", "http://localhost:8000")
+API_URL = os.getenv(
+    "API_URL",
+    "https://machine-sentinel.onrender.com"
+).rstrip("/")
 
 st.set_page_config(page_title="Machine Sentinel", layout="wide")
 st.title("Machine Sentinel")
